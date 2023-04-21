@@ -22,5 +22,14 @@ public class FrameTest {
 		assertEquals(5, frame.getSecondThrow());
 		
 	}
+	
+	@Test
+	public void testFrameScore7FromThrows2_5() throws Exception{
+		Frame frame = new Frame(2,5);
+		
+		assertEquals(7, frame.getScore());
+		
+	}
+	
 
 }

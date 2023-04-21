@@ -63,8 +63,8 @@ public class Frame {
 	 * @return The score
 	 */
 	public int getScore() {
-		// To be implemented
-		return 0;
+		
+		return (this.firstThrow + this.secondThrow);
 	}
 
 	/**
