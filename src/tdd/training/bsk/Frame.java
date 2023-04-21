@@ -67,7 +67,7 @@ public class Frame {
 	 */
 	public int getScore() {
 		
-		return (this.firstThrow + this.secondThrow);
+		return (this.firstThrow + this.secondThrow + this.bonus);
 	}
 
 	/**
