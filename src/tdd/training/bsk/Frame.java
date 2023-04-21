@@ -7,7 +7,7 @@ public class Frame {
 	private int firstThrow;
 	private int secondThrow;
 	private int bonus;
-
+	
 	/**
 	 * It initializes a frame given the pins knocked down in the first and second
 	 * throws, respectively.
@@ -20,6 +20,7 @@ public class Frame {
 		this.firstThrow=firstThrow;
 		this.secondThrow=secondThrow;
 		this.bonus=0;
+		
 	}
 
 	/**
@@ -76,7 +77,7 @@ public class Frame {
 	 * @return <true> if strike, <false> otherwise.
 	 */
 	public boolean isStrike() {
-		// To be implemented
+		if (this.firstThrow==10) return true;
 		return false;
 	}
 

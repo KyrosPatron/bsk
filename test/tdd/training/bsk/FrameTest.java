@@ -52,8 +52,20 @@ public class FrameTest {
 	
 	@Test
 	public void testFrameIsNotSpare() throws Exception{
-		Frame frame = new Frame (10,0);
+		Frame frame = new Frame (2,7);
 		assertFalse(frame.isSpare());
+	}
+	
+	@Test
+	public void testFrameIsStrike() throws Exception{
+		Frame frame = new Frame (10,0);
+		assertTrue(frame.isStrike());
+	}
+	
+	@Test
+	public void testFrameIsNotStrike() throws Exception{
+		Frame frame = new Frame (9,1);
+		assertFalse(frame.isStrike());
 	}
 	
 
