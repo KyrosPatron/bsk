@@ -2,6 +2,8 @@ package tdd.training.bsk;
 
 public class Frame {
 
+	private int firstThrow;
+
 	/**
 	 * It initializes a frame given the pins knocked down in the first and second
 	 * throws, respectively.
@@ -11,7 +13,7 @@ public class Frame {
 	 * @throws BowlingException
 	 */
 	public Frame(int firstThrow, int secondThrow) throws BowlingException {
-		// To be implemented
+		this.firstThrow=firstThrow;
 	}
 
 	/**
@@ -20,8 +22,8 @@ public class Frame {
 	 * @return The pins knocked down in the first throw.
 	 */
 	public int getFirstThrow() {
-		// To be implemented
-		return 0;
+		
+		return this.firstThrow;
 	}
 
 	/**
