@@ -44,5 +44,17 @@ public class FrameTest {
 		assertEquals(5, frame.getBonus());
 	}
 	
+	@Test
+	public void testFrameIsSpare() throws Exception{
+		Frame frame = new Frame (3,7);
+		assertTrue(frame.isSpare());
+	}
+	
+	@Test
+	public void testFrameIsNotSpare() throws Exception{
+		Frame frame = new Frame (10,0);
+		assertFalse(frame.isSpare());
+	}
+	
 
 }

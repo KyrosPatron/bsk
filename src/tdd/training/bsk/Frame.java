@@ -86,7 +86,8 @@ public class Frame {
 	 * @return <true> if spare, <false> otherwise.
 	 */
 	public boolean isSpare() {
-		// To be implemented
+		if ((this.firstThrow<10) && (this.getScore()==10)) return true;
+		
 		return false;
 	}
 
