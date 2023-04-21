@@ -6,10 +6,12 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class GameTest {
-	private Game game = new Game();
+	private Game game;
 	
 	@Before
 	public void setUp() throws BowlingException{
+		game = new Game();
+		
 		game.addFrame(new Frame(1,5));
 		game.addFrame(new Frame(3,6));
 		game.addFrame(new Frame(7,2));
@@ -49,9 +51,16 @@ public class GameTest {
 	}
 	
 	@Test
-	public void testCalculateScore() throws BowlingException{
+	public void testCalculateScore81() throws BowlingException{
 		
 		assertEquals(81, game.calculateScore());
+	}
+	
+	@Test
+	public void testCalculateScore0() throws BowlingException{
+		game = new Game();
+		
+		assertEquals(0, game.calculateScore());
 	}
 
 	
