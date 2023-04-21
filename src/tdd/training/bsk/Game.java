@@ -94,8 +94,10 @@ public class Game {
 			if (i < (frames.size()-1)) {
 				if (frames.get(i).isSpare()) {
 					frames.get(i).setBonus(frames.get(i+1).getFirstThrow());
+				}else if (frames.get(i).isStrike()) {
+					frames.get(i).setBonus(frames.get(i+1).getScore());
 				}
-			}
+			} 
 			
 			tot+=frames.get(i).getScore();
 		}
