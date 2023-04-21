@@ -6,6 +6,7 @@ public class Frame {
 
 	private int firstThrow;
 	private int secondThrow;
+	private int bonus;
 
 	/**
 	 * It initializes a frame given the pins knocked down in the first and second
@@ -18,6 +19,7 @@ public class Frame {
 	public Frame(int firstThrow, int secondThrow) throws BowlingException {
 		this.firstThrow=firstThrow;
 		this.secondThrow=secondThrow;
+		this.bonus=0;
 	}
 
 	/**
@@ -46,7 +48,7 @@ public class Frame {
 	 * @param bonus The bonus.
 	 */
 	public void setBonus(int bonus) {
-		// To be implemented
+		this.bonus=bonus;
 	}
 
 	/**
@@ -55,8 +57,7 @@ public class Frame {
 	 * @return The bonus.
 	 */
 	public int getBonus() {
-		// To be implemented
-		return 0;
+		return this.bonus;
 	}
 
 	/**
