@@ -14,7 +14,7 @@ public class GameTest {
 		
 		game.addFrame(new Frame(1,5));
 		game.addFrame(new Frame(3,6));
-		game.addFrame(new Frame(7,3));
+		game.addFrame(new Frame(7,2));
 		game.addFrame(new Frame(3,6));
 		game.addFrame(new Frame(4,4));
 		game.addFrame(new Frame(5,3));
@@ -44,17 +44,12 @@ public class GameTest {
 	
 	@Test
 	public void testGetThirdFrame() throws BowlingException{
-		Frame frameExp = new Frame(7,3);
+		Frame frameExp = new Frame(7,2);
 		Frame myFrame = game.getFrameAt(2);
 		assertTrue(myFrame.equals(frameExp));
 		
 	}
 	
-	@Test
-	public void testCalculateScore81() throws BowlingException{
-		
-		assertEquals(82, game.calculateScore());
-	}
 	
 	@Test
 	public void testCalculateScore0() throws BowlingException{
@@ -62,7 +57,30 @@ public class GameTest {
 		
 		assertEquals(0, game.calculateScore());
 	}
-
+	
+	@Test
+	public void testCalculateScore81() throws BowlingException{
+		assertEquals(81, game.calculateScore());
+	}
+	
+	@Test
+	public void testCalculateScoreWith1SpareBonus() throws BowlingException{
+		game = new Game();
+		
+		game.addFrame(new Frame(1,5));
+		game.addFrame(new Frame(4,6));
+		game.addFrame(new Frame(7,2));
+		game.addFrame(new Frame(3,6));
+		game.addFrame(new Frame(4,4));
+		game.addFrame(new Frame(5,3));
+		game.addFrame(new Frame(3,3));
+		game.addFrame(new Frame(4,5));
+		game.addFrame(new Frame(8,1));
+		game.addFrame(new Frame(2,6));
+		//total score without bonus 82
+		//total score with bonus (82 + 7) = 89
+		assertEquals(89, game.calculateScore());
+	}
 	
 
 

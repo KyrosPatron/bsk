@@ -88,9 +88,19 @@ public class Game {
 	 */
 	public int calculateScore() throws BowlingException {
 		int tot=0;
-		for(Frame fr : frames) {
-			tot+=fr.getScore();
+		
+		for (int i=0 ; i <(frames.size()); i++) {
+			
+			if (i < (frames.size()-1)) {
+				if (frames.get(i).isSpare()) {
+					frames.get(i).setBonus(frames.get(i+1).getFirstThrow());
+				}
+			}
+			
+			tot+=frames.get(i).getScore();
 		}
+
+
 
 		return tot;	
 	}
