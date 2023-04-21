@@ -34,8 +34,10 @@ public class Game {
 	 * @throws BowlingException
 	 */
 	public Frame getFrameAt(int index) throws BowlingException {
-		// To be implemented
-		return null;	
+
+		if (index >=0 && index <= 9) return this.frames.get(index);	
+		else throw new BowlingException("Can't get this Frame (out of range 0-9)");
+		
 	}
 
 	/**
