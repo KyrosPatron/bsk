@@ -1,12 +1,17 @@
 package tdd.training.bsk;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Game {
+	
+	private List<Frame> frames;
 
 	/**
 	 * It initializes an empty bowling game.
 	 */
 	public Game() {
-		// To be implemented
+		this.frames = new ArrayList<>();
 	}
 
 	/**
@@ -16,7 +21,9 @@ public class Game {
 	 * @throws BowlingException
 	 */
 	public void addFrame(Frame frame) throws BowlingException {
-		// To be implemented
+
+		if (this.frames.size()<10) this.frames.add(frame);
+		else throw new BowlingException("Can't insert more than 10 frames");
 	}
 
 	/**
