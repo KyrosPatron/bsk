@@ -40,7 +40,13 @@ public class GameTest {
 		game.getFrameAt(10);
 	}
 	
-
+	@Test
+	public void testGetThirdFrame() throws BowlingException{
+		Frame frameExp = new Frame(7,2);
+		Frame myFrame = game.getFrameAt(2);
+		assertTrue(myFrame.equals(frameExp));
+		
+	}
 
 	
 

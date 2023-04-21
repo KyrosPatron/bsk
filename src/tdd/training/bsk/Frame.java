@@ -1,5 +1,7 @@
 package tdd.training.bsk;
 
+import java.util.Objects;
+
 public class Frame {
 
 	private int firstThrow;
@@ -86,5 +88,25 @@ public class Frame {
 		// To be implemented
 		return false;
 	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(firstThrow, secondThrow);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Frame other = (Frame) obj;
+		return firstThrow == other.firstThrow && secondThrow == other.secondThrow;
+	}
+	
+
+
 
 }
