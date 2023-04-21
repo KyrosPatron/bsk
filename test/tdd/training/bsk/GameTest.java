@@ -47,6 +47,12 @@ public class GameTest {
 		assertTrue(myFrame.equals(frameExp));
 		
 	}
+	
+	@Test
+	public void testCalculateScore() throws BowlingException{
+		
+		assertEquals(81, game.calculateScore());
+	}
 
 	
 

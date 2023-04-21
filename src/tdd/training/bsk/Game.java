@@ -87,8 +87,12 @@ public class Game {
 	 * @throws BowlingException
 	 */
 	public int calculateScore() throws BowlingException {
-		// To be implemented
-		return 0;	
+		int tot=0;
+		for(Frame fr : frames) {
+			tot+=fr.getScore();
+		}
+
+		return tot;	
 	}
 
 }
