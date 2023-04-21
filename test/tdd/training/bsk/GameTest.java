@@ -14,7 +14,7 @@ public class GameTest {
 		
 		game.addFrame(new Frame(1,5));
 		game.addFrame(new Frame(3,6));
-		game.addFrame(new Frame(7,2));
+		game.addFrame(new Frame(7,3));
 		game.addFrame(new Frame(3,6));
 		game.addFrame(new Frame(4,4));
 		game.addFrame(new Frame(5,3));
@@ -44,7 +44,7 @@ public class GameTest {
 	
 	@Test
 	public void testGetThirdFrame() throws BowlingException{
-		Frame frameExp = new Frame(7,2);
+		Frame frameExp = new Frame(7,3);
 		Frame myFrame = game.getFrameAt(2);
 		assertTrue(myFrame.equals(frameExp));
 		
@@ -53,7 +53,7 @@ public class GameTest {
 	@Test
 	public void testCalculateScore81() throws BowlingException{
 		
-		assertEquals(81, game.calculateScore());
+		assertEquals(82, game.calculateScore());
 	}
 	
 	@Test
